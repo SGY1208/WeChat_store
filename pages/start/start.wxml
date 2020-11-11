@@ -1,0 +1,33 @@
+<!--pages/start/start.wxml-->
+<!-- 启动界面 -->
+<view class='container'>
+<!-- 加载开始 -->
+  <!-- <view>
+    <image src='/images/start/adver.jpg'></image>
+  </view> -->
+  <view class='remind-box' wx:if="{{}}">
+    <image class='remind-img' src='/images/start/loading.gif'></image>
+  </view>
+  <!--加载结束  -->
+  <block wx:else>
+    <image class='logo' src='/images/logo.png'></image>
+  </block>
+  <!-- 内容 -->
+  <view class='content'>
+    <view class='mid_box'>
+        <view class='avatar'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      <image class='wave' src='/images/start/wave.png' mode='aspecFill'></image>
+      <image class='wave wave_bg' src='/images/start/wave.png' mode='aspecFill'></image>
+    </view>
+    <view class='bottom_box'>
+      <image class='ader' src='/images/start/adver.jpg'></image>
+      <!-- 按钮 -->
+      <button class='btn_shop' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>
+        <text>进入便利店</text>
+      </button>
+      <text class='copyright'>Powered by 沈国媛</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,204 @@
+/* pages/start/start.wxss */
+page{
+font-family: -apple-system-font,Helvetica Neue,Melvetice,sans-serif;
+font-size: 10pt;
+line-height: 150%;
+min-height: 100%;
+/* 相对定位 */
+position: relative;
+/* 弹性盒子布局 */
+display: flex;
+flex-direction: column;
+align-items: stretch;  
+}
+ .container{
+  height: 100%;  
+   position: relative; 
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items:stretch; 
+   background-color: rgb(0, 170, 144);  
+  /* 超出部分隐藏  */
+  overflow: hidden; 
+  /* 图文对齐方式 */
+   justify-content: space-between;
+  box-sizing: border-box; 
+  /* 内边距 */
+   padding: 0; 
+  /* 外边距 */
+   margin: 0;
+  } 
+  /* .container1{
+    width: 400rpx;
+    height: 400rpx;
+  } */
+
+  .remind-box{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items:center; 
+    justify-content: center;
+    padding-bottom: 300rpx;
+  }
+  .remind-img{
+    height: 250rpx;
+    width: 250rpx;
+    padding-bottom: 25rpx;
+  }
+  .logo{
+      position: absolute;
+      top: 40rpx;
+      left: 50%;
+      width:310rpx;
+      height: 291rpx;
+      margin-left: -155rpx;
+      /* 透明 */
+      opacity: 0;
+      /* 动画 */
+      animation: show 2.5s cubic-bezier(0.19,1,0.22,1) 0.5s forwards;
+  }
+  /* 帧动画 */
+  @keyframes show{
+    0%{opacity: 0}
+    100%{opacity: .95}
+  }
+  .content{
+    display: flex;
+    flex: 1;
+    position: relative;
+    /* 定位的层次关系 */
+    z-index: 10;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 450rpx;
+    /* 渐变 */
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(244, 244, 244, 0)),color-stop(0.1,#f4f4f4),to(#f4f4f4));
+    opacity: 0;
+    /* 变形之位移 */
+    transform: translate3d(0,100%,0);
+    /* 动画名字 运行时间 运行曲线 延迟时间 运行次数 */
+    animation: rise 3s cubic-bezier(0.19,1,0.22,1) 0.25s forwards;
+  }
+   @keyframes rise{
+     0%{opacity: 0;transform: translate3d(0,100%,0);}
+     50%{opacity: 1}
+     100%{opacity: 1;transform: translate3d(0,450rpx,0);}
+   }
+   .mid_box{
+     position: absolute;
+     top: 50rpx;
+     left: 50%;
+     width: 1000rpx;
+     height: 200rpx;
+     margin-left: -500rpx;
+     /* 过渡 */
+     transition: all 0.35s ease;
+   }
+   .avatar{
+     position: absolute;
+     z-index: 2;
+     left: 50%;
+     bottom: 210rpx;
+     width: 160rpx;
+     margin-left: -80rpx;
+     /* 圆角 */
+     border-radius: 50%;
+     opacity: .95;
+     animation: sway 10s ease-in-out infinite;
+     overflow: hidden;
+     /* 转换为块级元素显示 */
+     display: block;
+     /* 边框 */
+     border: 1rpx solid #f4f4f4;
+     box-shadow:3rpx 3rpx 10rpx rgba(0, 0, 0, 0.2);
+   }
+   /* 位移旋转 */
+   @keyframes sway{
+     0%{transform: translate3d(0,20rpx,0) rotate(-15deg)}
+     17%{transform: translate3d(0,0rpx,0) rotate(25deg)}
+     34%{transform: translate3d(0,-20rpx,0) rotate(-20deg)}
+     50%{transform: translate3d(0,-10rpx,0) rotate(15deg)}
+     67%{transform: translate3d(0,10rpx,0) rotate(-25deg)}
+     84%{transform: translate3d(0,15rpx,0) rotate(15deg)}
+     100%{transform: translate3d(0,20rpx,0) rotate(-15deg)}
+   }
+   .wave{
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      opacity: 0.725;
+      height: 260rpx;
+      width: 2250rpx;
+      animation: wave 10s linear infinite;
+   }
+   @keyframes wave{
+     0%{transform: translate3d(125rpx,0,0)}
+     100%{transform: translate3d(1125rpx,0,0)}
+   }
+   .wave_bg{
+     z-index: 1;
+     animation: wave_bg;
+   }
+    @keyframes wave{
+     0%{transform: translate3d(475rpx,0,0)}
+     100%{transform: translate3d(1375rpx,0,0)}
+   }
+   .bottom_box{
+     position: relative;
+     /* top: 6rpx; */
+     z-index: 11;
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: stretch;
+     opacity: 0;
+     animation: box_rise 2s cubic-bezier(0.23,1,0.32,1) .75s forwards;
+   }
+    @keyframes box_rise{
+     0%{opacity: 0; transform: translate3d(0,60rpx,0)}
+     100%{opacity: 1; transform: translate3d(0,0,0)}
+   }
+   .ader{
+     position: absolute;
+     top: 98rpx;
+     left: 50%;
+     width: 620rpx;
+     height: 346rpx;
+     margin-left: -308rpx;
+     opacity: 0;
+     animation: shows 2.5s cubic-bezier(0.19,1,0.22,1) .5s forwards;
+   }
+   @keyframes shows{
+     0%{opacity: 0}
+     100%{opacity: .95}
+   }
+   .btn_shop{
+     position: absolute;
+     font-size: 11pt;
+     line-height: 75rpx;
+     width: 300rpx;
+     background-color: #00aa99;
+     color: #fff;
+     /* 文字居中 */
+     text-align: center; 
+     border-radius: 15rpx;
+     margin: 62% 0%;
+     margin-left: -150rpx;
+     left: 52%;  
+   }
+   .copyright{
+     font-size: 28rpx;
+     color: #999;
+     /* 固定定位 */
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 45rpx;
+     text-align: center;
+   }

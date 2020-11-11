@@ -1,0 +1,35 @@
+/* pages/shopping_cart/shopping_cart.wxss */
+page{
+  min-height: 100%;
+  background-color: #f2f2f2;
+}
+.container{
+  /* background: #f2f2f2; */
+  justify-content: inherit
+}
+.container-icon{
+  width: 100rpx;
+  height: 100rpx;
+  /* margin-right: 20rpx; */
+}
+.title-box{
+  width: 100%;
+  padding-top: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  /* background: url(../images/cart.png) no-repeat center 205rpx; */
+  /* background: url(https://cdn.it120.cc/images/weappshop/icon-cart.png) no-repeat center 205rpx; */
+  margin-bottom: 50rpx;
+  background-size: 100rpx auto;
+}
+.to-index-btn{
+  color: #fff;
+  background: #e64340;
+  border-radius: 12rpx;
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+}

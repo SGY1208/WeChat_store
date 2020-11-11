@@ -1,0 +1,173 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='swiper-container'>
+    <swiper class='swiper-box' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' circular='{{circular}}' duration='{{duration}}'>
+    <!-- 循环图片 -->
+      <block wx:for="{{imgUrls}}" wx:key="item">
+        <swiper-item>
+          <image src='{{item}}' class='slide-image'></image>
+        </swiper-item>
+      </block>
+    </swiper>  
+  </view>
+  <view class='search-view'>
+    <view class='search-content'>
+      <image src='/images/index/Search.png' class='search-icon'></image>
+     <!-- 输入框 最大长度为30-->
+      <input placeholder='请输入您想要的商品名' maxlength='30' class='search-input' bindtap='toSearch'></input>
+    </view>
+  </view>
+  <view class='notice'>
+    <view class='notice-item'>公告：</view>
+    <swiper class='notice-swiper' vertical='true' autoplay='true' circular='true' interval='3000'>
+      <navigator url=''>
+        <swiper-item>
+          <view class='notice-itemr'>这是一条公告</view>
+        </swiper-item>
+      </navigator>
+
+      <navigator url=''>
+        <swiper-item>
+          <view class='notice-itemr'>优惠多多，好礼送不停</view>
+        </swiper-item>
+      </navigator>
+
+      <navigator url=''>
+        <swiper-item>
+          <view class='notice-itemr'>年终大促销</view>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+  <view class='advertisement'>
+    <!-- <navigator url=''> -->
+      <image src='/images/index/adv1.jpg' class='adver-img'></image> 
+    <!-- </navigator> -->
+  </view>
+  <view class='goods-title'>
+    <text> -火爆热销-</text>
+  </view>
+  <view class='goods-container'>
+    <view class='goods-box' bindtap='toDetailsTap'>
+      <view class='imgbox'>
+        <image src='/images/index/goods1.jpg'></image>
+      </view>
+      <view class='goodsBox-title'>可口可乐[500ml]</view>
+      <view class='goods-bottom'>
+        <view class='price-box'>
+          <view class='etime-goods-price'>
+            藤友价：
+            <text>$5+</text>
+            <text>E20</text>
+          </view>
+          <view class='normal-goods-price'>
+            实际价格：
+            <text>$6</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='goods-box' bindtap='toDetailsTap'>
+      <view class='imgbox'>
+        <image src='/images/index/goods2.jpg'></image>
+      </view>
+      <view class='goodsBox-title'>三只松鼠 芒果干</view>
+      <view class='goods-bottom'>
+        <view class='price-box'>
+          <view class='etime-goods-price'>
+            藤友价： 
+            <text>$20+</text>
+            <text>E300</text>
+          </view>
+          <view class='normal-goods-price'>
+            实际价格：
+            <text>$30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='goods-box' bindtap='toDetailsTap'>
+      <view class='imgbox'>
+        <image src='/images/index/goods3.jpg'></image>
+      </view>
+      <view class='goodsBox-title'>香辣鸭脖</view>
+      <view class='goods-bottom'>
+        <view class='price-box'>
+          <view class='etime-goods-price'>
+            藤友价：
+            <text>$40+</text>
+            <text>E500</text>
+          </view>
+          <view class='normal-goods-price'>
+            实际价格：
+            <text>$45</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='goods-box' bindtap='toDetailsTap'>
+      <view class='imgbox'>
+        <image src='/images/index/goods4.jpg'></image>
+      </view>
+      <view class='goodsBox-title'>达利园派</view>
+      <view class='goods-bottom'>
+        <view class='price-box'>
+          <view class='etime-goods-price'>
+            藤友价：
+            <text>$40+</text>
+            <text>E500</text>
+          </view>
+          <view class='normal-goods-price'>
+            实际价格：
+            <text>$50</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='goods-box' bindtap='toDetailsTap'>
+      <view class='imgbox'>
+        <image src='/images/index/goods5.jpg'></image>
+      </view>
+      <view class='goodsBox-title'>好吃点饼干</view>
+      <view class='goods-bottom'>
+        <view class='price-box'>
+          <view class='etime-goods-price'>
+            藤友价：
+            <text>$45+</text>
+            <text>E600</text>
+          </view>
+          <view class='normal-goods-price'>
+            实际价格：
+            <text>$50</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='goods-box' bindtap='toDetailsTap'>
+      <view class='imgbox'>
+        <image src='/images/index/goods6.jpg'></image>
+      </view>
+      <view class='goodsBox-title'>三只松鼠 鲜香鱿鱼丝</view>
+      <view class='goods-bottom'>
+        <view class='price-box'>
+          <view class='etime-goods-price'>
+            藤友价：
+            <text>$50+</text>
+            <text>E900</text>
+          </view>
+          <view class='normal-goods-price'>
+            实际价格：
+            <text>$55</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='no-more-goods' hidden='{{loadingMoreHidden ? true : false}}'>没有更多了</view>
+</view>

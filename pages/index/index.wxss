@@ -1,0 +1,195 @@
+/**index.wxss**/
+.container{
+  background: #eceaea;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.swiper-container{
+  width: 750rpx;
+  height: 430rpx;
+  position: relative;
+}
+.swiper-box{
+  width: 100%;
+  height: 430rpx;
+}
+.slider-image{
+  width: 100%;
+  height: 430rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+.search-view{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+}
+.search-content{
+  background: white;
+  width: 660rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: auto;
+  padding-left: 10rpx;
+  padding-bottom: auto;
+  margin: auto;
+  height: 60rpx;
+  border-radius: 60rpx;
+  opacity: .8;
+}
+.search-icon{
+  width: 32rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.search-input{
+  width: 500rpx;
+  font-size: 28rpx;
+}
+.notice{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 730rpx;
+  margin-top: 14rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.notice-item{
+  padding-left: 20rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  font-size: 26rpx;
+  width: 120rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #999;
+  text-align: center;
+}
+.notice-swiper{
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 590rpx;
+}
+.notice-itemr{
+  font-size: 26rpx;
+  overflow: hidden;
+  color: #e64340;
+  width: 540rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.advertisement{
+  display: flex;
+  justify-content: 5 pasce-between;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 300rpx;
+  margin: 14rpx;
+}
+.adver-img{
+  height: 300rpx;
+  width: 710rpx;
+  padding: 0rpx 20rpx;
+}
+
+.goods-title{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding-bottom: 16rpx;
+}
+.goods-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  padding: 0rpx 18rpx;
+}
+.goods-box{
+  width: 348rpx;
+  height: 472rpx;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+  margin: 0rpx 4rpx 6rpx 4rpx;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 16rpx;
+
+}
+.imgbox{
+  width: 348rpx;
+  height: 348rpx;
+  overflow: hidden;
+}
+/* 空格表示选择 .imgbox 里面的 image */
+.imgbox image{
+  width: 300rpx;
+  height: 300rpx;
+  padding: 24rpx;
+}
+.goodsBox-title{
+  width: 346rpx;
+  height: 30rpx;
+  /* 文字超出部分显示为"..." */
+  text-overflow: ellipsis;
+  /* 禁止换行 */
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #000;
+  text-align: center;
+}
+.goods-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+.price-box{
+  width: 38rpx;
+  height: auto;
+}
+.etime-goods-price{
+  width: 100%;
+  font-size: 28rpx;
+  color: #ff6600;
+  margin: 5rpx 0rpx;
+  padding-left: 26rpx;
+}
+/* 选择.etime-goods-price里面的最后一个text */
+.etime-goods-price text:last-child{
+  color: #fff;
+  background-color: #ff6600;
+  border-radius: 8rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  padding: 0rpx 14rpx;
+}
+.normal-goods-price{
+  width: 100%;
+  font-size: 24rpx;
+  color: #999;
+  margin: 5rpx 0rpx;
+  padding-left: 26rpx;
+}
+.no-more-goods{
+  text-align: center;
+  font-size: 24rpx;
+  padding-bottom: 48rpx;
+  color: #999;
+}

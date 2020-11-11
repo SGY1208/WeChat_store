@@ -1,0 +1,229 @@
+<!--pages/sorts/sorts.wxml-->
+<view class='container'>
+  <view class='search-view'>
+    <view class='search-content'>
+      <image src='/images/index/Search.png' class='search-icon'></image>
+      <input placeholder='请输入您想要的商品' class='search-input' maxlength='30' confirm-type='搜索' bindinput='listenerSearchInput' bindconfirm='toSearch'></input>
+    </view>  
+  </view>
+  <view class='sorts-box'>
+    <view class='sorts-left'>
+      <view class='sorts-list {{curIndex == index?" on":""}}' wx:for="{{sorts}}" wx:key="index" bindtap='switchTab' data-id='{{item.id}}' data-index="{{index}}">{{item.name}}
+      </view>
+    </view>
+    <scroll-view class='sorts-right' scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-width-animation="true">
+      <block>
+        <view class='sorts-info' id="fbss">
+          <view class='sorts-title'> 
+            <text>--方便速食--</text>
+          </view>
+          <view class='product'>
+            <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/fbss1.jpg'></image>
+                <view class='classname'>
+                  <text>汤大师</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+            <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/fbss2.jpg'></image>
+                <view class='classname'>
+                  <text>重庆酸辣粉</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/fbss3.jpg'></image>
+                <view class='classname'>
+                  <text>过桥米线</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/fbss4.jpg'></image>
+                <view class='classname'>
+                  <text>菜泡饭</text>
+                </view>
+              <!-- </navigator> -->
+          </view>  
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class='sorts-info' id="ylyp">
+          <view class='sorts-title'> 
+            <text>--饮料饮品--</text>
+          </view>
+          <view class='product'>
+            <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/ylyp1.jpg'></image>
+                <view class='classname'>
+                  <text>王老吉</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/ylyp2.jpg'></image>
+                <view class='classname'>
+                  <text>冰红茶</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/ylyp3.jpg'></image>
+                <view class='classname'>
+                  <text>阿萨姆奶茶</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/ylyp4.jpg'></image>
+                <view class='classname'>
+                  <text>牛乳茶</text>
+                </view>
+              <!-- </navigator> -->
+          </view>  
+          </view>
+        </view>
+      </block>
+      
+      <block>
+        <view class='sorts-info' id="xy">
+          <view class='sorts-title'> 
+            <text>--香烟--</text>
+          </view>
+          <view class='product'>
+            <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xy1.jpg'></image>
+                <view class='classname'>
+                  <text>红河</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xy2.jpg'></image>
+                <view class='classname'>
+                  <text>玉溪</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xy3.jpg'></image>
+                <view class='classname'>
+                  <text>玉溪</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xy4.jpg'></image>
+                <view class='classname'>
+                  <text>红塔山</text>
+                </view>
+              <!-- </navigator> -->
+          </view>  
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class='sorts-info' id="xxsp">
+          <view class='sorts-title'> 
+            <text>--休闲食品--</text>
+          </view>
+          <view class='product'>
+            <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xxsp1.jpg'></image>
+                <view class='classname'>
+                  <text>蒜香青豆</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xxsp2.jpg'></image>
+                <view class='classname'>
+                  <text>可比克薯片</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xxsp3.jpeg'></image>
+                <view class='classname'>
+                  <text>罐头</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/xxsp4.jpeg'></image>
+                <view class='classname'>
+                  <text>旺仔小馒头</text>
+                </view>
+              <!-- </navigator> -->
+          </view>  
+          </view>
+        </view>
+      </block>
+
+       <block>
+        <view class='sorts-info' id="shyp">
+          <view class='sorts-title'> 
+            <text>--生活用品--</text>
+          </view>
+          <view class='product'>
+            <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/shyp.jpg'></image>
+                <view class='classname'>
+                  <text>口杯</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          <view class='product-list'>
+              <!-- <navigator url=''> -->
+                <image src='/images/sorts/shyp2.jpg'></image>
+                <view class='classname'>
+                  <text>拖把</text>
+                </view>
+              <!-- </navigator> -->
+          </view>
+          </view>
+        </view>
+      </block>
+
+      <block>
+        <view class='sorts-info' id="xhyp">
+          <view class='sorts-title'> 
+            <text>--洗护用品--</text>
+          </view>
+          <view class='product'>
+            <view class='product-list'>
+              <navigator url=''>
+                <image src='/images/sorts/xhyp1.jpg'></image>
+                <view class='classname'>
+                  <text>婴儿沐浴露</text>
+                </view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </block>
+       
+    </scroll-view>
+  </view>
+</view>

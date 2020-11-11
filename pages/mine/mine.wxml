@@ -1,0 +1,51 @@
+<!--pages/mine/mine.wxml-->
+<view class='container'>
+  <view class='mine-top'>
+    <view class='avatar-left'>
+      <image class='userinfo-avatar' src='{{userInfo.avatarUrl}}' mode='cover'></image>    
+    </view>
+    <view class='avatar-right'>
+      <view class='name-box'>
+        <text>{{userInfo.nickName}}</text>
+        <view class='accont-type off'>未绑定</view>
+      </view>
+      <view class='accont'>账号：250****472@qq.com</view>
+    </view>
+  </view>
+  <view class='mine-content'>
+    <view class='content'>
+      <view class='mine-list' bindtap='goToAllList'>
+        <image class='icon' src='/images/mine/all.png'></image>
+        <text>全部订单</text>
+        <image class='jt' src='/images/mine/arrow-right.png'></image>
+      </view>
+
+      <view class='mine-list' bindtap='goToPaying'>
+        <image class='icon' src='/images/mine/paying.png'></image>
+        <text>待支付</text>
+        <image class='jt' src='/images/mine/arrow-right.png'></image>
+      </view>
+
+      <view class='mine-list' bindtap='goToGetting'>
+        <image class='icon' src='/images/mine/getting.png'></image>
+        <text>待取货</text>
+        <image class='jt' src='/images/mine/arrow-right.png'></image>
+      </view>
+
+      <view class='mine-list' bindtap='goToSetting'>
+        <image class='icon' src='/images/mine/setting.png'></image>
+        <text>个人设置</text>
+        <image class='jt' src='/images/mine/arrow-right.png'></image>
+      </view>
+    </view>
+
+    <view class='content'>
+      <view class='mine-list' bindtap='goToMine'>
+        <image class='icon' src='/images/mine/by.png'></image>
+        <text>关于我们</text>
+        <image class='jt' src='/images/mine/arrow-right.png'></image>
+      </view>
+      
+    </view>
+  </view>
+</view>

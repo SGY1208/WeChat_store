@@ -1,0 +1,105 @@
+/* pages/mine/mine.wxss */
+page{
+  height: 100%;
+}
+.container{
+  background-color: #ececec;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.mine-top{
+  width: 100%;
+  height: 380rpx;
+  background-color: #00aa90;
+  display: flex;
+  flex-direction: row;
+}
+.avatar-left{
+  width: 130rpx;
+  height: 130rpx;
+  margin: auto 40rpx;
+}
+.userinfo-avatar{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  opacity: .95;
+  border: 1rpx solid #fff;
+  box-shadow: 3rpx 3rpx 10rpx rgba(0, 0, 0, 0.2)
+}
+.avatar-right{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: auto 0rpx;
+}
+.avatar-right view{
+  margin: 2rpx 0rpx;
+}
+.name-box{
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rpx;
+}
+.name-box text{
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+.accont-type{
+  font-size: 22rpx;
+  height: 32rpx;
+  width: 76rpx;
+  line-height: 32rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  padding: 6rpx;
+}
+.on{
+  background-color: #fcbb42;
+}
+.off{
+  background-color: #ff4335;
+}
+.accont{
+  font-size: 24rpx;
+  padding-left: 30rpx;
+}
+.mine-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  width: 100%;
+  height: auto;
+  margin-top: 36rpx;
+}
+.mine-list{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #999;
+  font-size: 24rpx;
+  background: #fff;
+}
+.mine-list text{
+  padding-left: 10rpx;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 14rpx;
+  float: left;
+  padding-left: 12rpx;
+}
+.jt{
+  width: 16rpx;
+  height: 24rpx;
+  float: right;
+  padding-top: 28rpx;
+  padding-right: 10rpx;
+}

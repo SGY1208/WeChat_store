@@ -1,0 +1,13 @@
+<!--pages/shopping_cart/shopping_cart.wxml-->
+<!-- <image></image> -->
+<view class='container'>
+  <image src='/images/cart.png' class='container-icon'></image>
+  <!-- <template is="{{goodsList.list.length > 0 ?'cart-goods-list':'no-goods'}}" data="{{...goodsList}}">
+  </template> -->
+  <view class='title-box'>
+       购物车空空如也...
+  </view>
+  <view class='to-index-btn' bindtap='toIndexPage'>
+        去逛逛
+  </view>
+</view>
